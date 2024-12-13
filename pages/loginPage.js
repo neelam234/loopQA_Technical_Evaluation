@@ -22,8 +22,11 @@ class LoginPage {
 
   }
 
-  async verifyTaskInColumn(page, columnName, taskName) {
+  async verifyTaskInColumn(page,navigation ,columnName, taskName) {
     // Build the locator using the column name and task name
+    const app = `//h2[contains(text(),'${navigation}')]`;
+    await page.locator(app).click();
+    
     const taskSelector = `//div[h2[contains(text(), '${columnName}')]]//h3[text()='${taskName}']`;
 
     // Locate the task element

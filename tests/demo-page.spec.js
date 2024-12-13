@@ -16,20 +16,30 @@ test.describe("Demo", function () {
                 // Navigate to the specified application section
                 console.log("column name:" + testcase.column)
                 console.log("task name:" + testcase.task)
-                await login.verifyTaskInColumn(page, testcase.column, testcase.task)
+                await login.verifyTaskInColumn(page,testcase.navigation,testcase.column, testcase.task)
 
                 // Check tags
-                console.log(typeof(testcase.tags));
-                const tag =testcase.tags;           
+                console.log(typeof (testcase.tags));
+                const tag = testcase.tags;
 
-                 for (let i=0;i<tag.length;i++) {
+                for (let i = 0; i < tag.length; i++) {
                     console.log(tag);
-                    await login.verifyTaskTags(page, testcase.navigation,testcase.column,testcase.task, tag[i]);
-                }  
+                    await login.verifyTaskTags(page, testcase.navigation, testcase.column, testcase.task, tag[i]);
+                }
 
             });
 
         });
+
+        /*Sample testcase
+
+        Test Case 1
+
+    Login to Demo App.
+    Navigate to "Web Application."
+    Verify "Implement user authentication" is in the "To Do" column.
+    Confirm tags: "Feature" "High Priority”
+    */
 
     }
 
