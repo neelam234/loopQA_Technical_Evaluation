@@ -18,6 +18,25 @@ Ensure you have the following installed on your machine:
 
 **Installation**
 1. Clone this repository to your local machine:
-   git clone https://github.com/your-username/
+   "git clone https://github.com/neelam234/loopQA_Technical_Evaluation.git"
+   
+2. Navigate to the project folder:
+   "cd loopQA_Technical_Evaluation.git"
+   
+3. Install the required dependencies:
+   "npm install"
+   
+4. Make sure Playwright is properly installed and set up:
+   "npx playwright install"
+
+**How to Run**
+
+1. Run Tests Locally: You can execute the tests by running the following command in your terminal:
+   "npx playwright test"
+
+2. Run Specific Test File: To run a specific test file, use
+   "npx playwright test <test-file-name>"
+   
+
 
 
